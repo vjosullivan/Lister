@@ -12,7 +12,8 @@
 		F199DA1D2011D0F500FB260C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F199DA1B2011D0F500FB260C /* Main.storyboard */; };
 		F199DA1F2011D0F500FB260C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F199DA1E2011D0F500FB260C /* Assets.xcassets */; };
 		F199DA222011D0F500FB260C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F199DA202011D0F500FB260C /* LaunchScreen.storyboard */; };
-		F199DA2D2011D0F500FB260C /* VOSToDoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F199DA2C2011D0F500FB260C /* VOSToDoTests.swift */; };
+		F199DA392011D2C500FB260C /* ToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F199DA382011D2C500FB260C /* ToDo.swift */; };
+		F199DA3C2011D38800FB260C /* ToDoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F199DA3B2011D38800FB260C /* ToDoTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,8 +35,9 @@
 		F199DA212011D0F500FB260C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F199DA232011D0F500FB260C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F199DA282011D0F500FB260C /* VOSToDoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VOSToDoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F199DA2C2011D0F500FB260C /* VOSToDoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VOSToDoTests.swift; sourceTree = "<group>"; };
 		F199DA2E2011D0F500FB260C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F199DA382011D2C500FB260C /* ToDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDo.swift; sourceTree = "<group>"; };
+		F199DA3B2011D38800FB260C /* ToDoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		F199DA162011D0F500FB260C /* VOSToDo */ = {
 			isa = PBXGroup;
 			children = (
+				F199DA372011D2A300FB260C /* ToDo */,
 				F199DA172011D0F500FB260C /* AppDelegate.swift */,
 				F199DA192011D0F500FB260C /* ViewController.swift */,
 				F199DA1B2011D0F500FB260C /* Main.storyboard */,
@@ -90,10 +93,26 @@
 		F199DA2B2011D0F500FB260C /* VOSToDoTests */ = {
 			isa = PBXGroup;
 			children = (
-				F199DA2C2011D0F500FB260C /* VOSToDoTests.swift */,
+				F199DA3A2011D36C00FB260C /* ToDo */,
 				F199DA2E2011D0F500FB260C /* Info.plist */,
 			);
 			path = VOSToDoTests;
+			sourceTree = "<group>";
+		};
+		F199DA372011D2A300FB260C /* ToDo */ = {
+			isa = PBXGroup;
+			children = (
+				F199DA382011D2C500FB260C /* ToDo.swift */,
+			);
+			path = ToDo;
+			sourceTree = "<group>";
+		};
+		F199DA3A2011D36C00FB260C /* ToDo */ = {
+			isa = PBXGroup;
+			children = (
+				F199DA3B2011D38800FB260C /* ToDoTests.swift */,
+			);
+			path = ToDo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,6 +218,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F199DA392011D2C500FB260C /* ToDo.swift in Sources */,
 				F199DA1A2011D0F500FB260C /* ViewController.swift in Sources */,
 				F199DA182011D0F500FB260C /* AppDelegate.swift in Sources */,
 			);
@@ -208,7 +228,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F199DA2D2011D0F500FB260C /* VOSToDoTests.swift in Sources */,
+				F199DA3C2011D38800FB260C /* ToDoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
