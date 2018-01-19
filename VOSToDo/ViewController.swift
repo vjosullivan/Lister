@@ -22,8 +22,18 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let addButton = UIBarButtonItem.init(title: "New Item", style: .plain, target: self, action: #selector(addToDoItem))
+        navigationItem.rightBarButtonItem = addButton
 
         todoList.dataSource = self
+    }
+    
+    @objc
+    func addToDoItem() {
+        listManager.addItem() {
+            todoList.reloadData()
+        }
     }
 }
 
@@ -39,9 +49,13 @@ extension ViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = todoList.dequeueReusableCell(withIdentifier: "ToDoCell")!
-        cell.textLabel?.text = listManager.item(indexPath.row)
+        let cell = todoList.dequeueReusableCell(withIdentifier: "ToDoCell") as! ToDoTableViewCell
+        cell.title.text = listManager.item(indexPath.row)
 
         return cell
     }
+}
+
+extension ViewController: UITableViewDelegate {
+    
 }

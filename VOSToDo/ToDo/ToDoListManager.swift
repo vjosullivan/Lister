@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct ToDoListManager {
+class ToDoListManager {
 
     // MARK: - Local constants and variables.
 
@@ -35,5 +35,10 @@ struct ToDoListManager {
             return nil
         }
         return items[index].title
+    }
+    
+    public func addItem(completion: () -> ()) {
+        items.append(ToDo("New item \(items.count + 1)."))
+        completion()
     }
 }
