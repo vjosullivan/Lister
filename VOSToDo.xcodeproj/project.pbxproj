@@ -16,6 +16,7 @@
 		F199DA3C2011D38800FB260C /* ToDoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F199DA3B2011D38800FB260C /* ToDoTests.swift */; };
 		F199DA3E2011DAAA00FB260C /* ToDoListManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F199DA3D2011DAAA00FB260C /* ToDoListManager.swift */; };
 		F199DA402011E08800FB260C /* ToDoListManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F199DA3F2011E08800FB260C /* ToDoListManagerTests.swift */; };
+		F199DA462011E42800FB260C /* ToDoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F199DA452011E42800FB260C /* ToDoTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		F199DA3B2011D38800FB260C /* ToDoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoTests.swift; sourceTree = "<group>"; };
 		F199DA3D2011DAAA00FB260C /* ToDoListManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListManager.swift; sourceTree = "<group>"; };
 		F199DA3F2011E08800FB260C /* ToDoListManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListManagerTests.swift; sourceTree = "<group>"; };
+		F199DA452011E42800FB260C /* ToDoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 			children = (
 				F199DA382011D2C500FB260C /* ToDo.swift */,
 				F199DA3D2011DAAA00FB260C /* ToDoListManager.swift */,
+				F199DA452011E42800FB260C /* ToDoTableViewCell.swift */,
 			);
 			path = ToDo;
 			sourceTree = "<group>";
@@ -228,6 +231,7 @@
 				F199DA3E2011DAAA00FB260C /* ToDoListManager.swift in Sources */,
 				F199DA1A2011D0F500FB260C /* ViewController.swift in Sources */,
 				F199DA182011D0F500FB260C /* AppDelegate.swift in Sources */,
+				F199DA462011E42800FB260C /* ToDoTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
