@@ -15,6 +15,7 @@
 		F199DA392011D2C500FB260C /* ToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F199DA382011D2C500FB260C /* ToDo.swift */; };
 		F199DA3C2011D38800FB260C /* ToDoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F199DA3B2011D38800FB260C /* ToDoTests.swift */; };
 		F199DA3E2011DAAA00FB260C /* ToDoListManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F199DA3D2011DAAA00FB260C /* ToDoListManager.swift */; };
+		F199DA402011E08800FB260C /* ToDoListManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F199DA3F2011E08800FB260C /* ToDoListManagerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		F199DA382011D2C500FB260C /* ToDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDo.swift; sourceTree = "<group>"; };
 		F199DA3B2011D38800FB260C /* ToDoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoTests.swift; sourceTree = "<group>"; };
 		F199DA3D2011DAAA00FB260C /* ToDoListManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListManager.swift; sourceTree = "<group>"; };
+		F199DA3F2011E08800FB260C /* ToDoListManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListManagerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				F199DA3B2011D38800FB260C /* ToDoTests.swift */,
+				F199DA3F2011E08800FB260C /* ToDoListManagerTests.swift */,
 			);
 			path = ToDo;
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F199DA3C2011D38800FB260C /* ToDoTests.swift in Sources */,
+				F199DA402011E08800FB260C /* ToDoListManagerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

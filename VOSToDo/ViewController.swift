@@ -12,7 +12,7 @@ class ViewController: UIViewController {
 
     // MARK: - Local constants and variables.
 
-    private var items = [ToDo]()
+    private var listManager = ToDoListManager()
 
     // MARK: - Outlets.
 
@@ -24,26 +24,23 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         todoList.dataSource = self
-
-        for i in 1...3 {
-            items.append(ToDo("Item \(i)."))
-        }
     }
 }
 
 extension ViewController: UITableViewDataSource {
 
     func numberOfSections(in tableView: UITableView) -> Int {
+        // TODO: Remove magic number.
         return 1
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return items.count
+        return listManager.itemCount
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = todoList.dequeueReusableCell(withIdentifier: "ToDoCell")!
-        cell.textLabel?.text = items[indexPath.row].title
+        cell.textLabel?.text = listManager.item(indexPath.row)
 
         return cell
     }

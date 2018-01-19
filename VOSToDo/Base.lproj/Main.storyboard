@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -28,6 +29,20 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Idz-61-sV7" id="uTe-WI-fGh">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zzd-PB-A1Y" userLabel="title">
+                                                    <rect key="frame" x="15" y="11" width="345" height="22"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Zzd-PB-A1Y" firstAttribute="bottom" secondItem="uTe-WI-fGh" secondAttribute="bottomMargin" id="9HA-2c-TG1"/>
+                                                <constraint firstItem="Zzd-PB-A1Y" firstAttribute="top" secondItem="uTe-WI-fGh" secondAttribute="topMargin" id="fYc-Io-Rjh"/>
+                                                <constraint firstItem="Zzd-PB-A1Y" firstAttribute="leading" secondItem="uTe-WI-fGh" secondAttribute="leadingMargin" id="kTy-9i-Ov3"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Zzd-PB-A1Y" secondAttribute="trailing" id="xZO-eR-Csc"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
