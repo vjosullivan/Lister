@@ -41,4 +41,9 @@ class ToDoListManager {
         items.append(ToDo("New item \(items.count + 1)."))
         completion()
     }
+    
+    public func removeItem(_ index: Int, completion: () -> ()) {
+        items.remove(at: index)
+        completion()
+    }
 }
