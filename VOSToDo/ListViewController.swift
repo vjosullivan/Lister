@@ -12,17 +12,32 @@ class ListViewController: UIViewController {
     
     // MARK: - Local constants and variables.
     
-    private var listManager = ToDoListManager()
+    private let listManager: ToDoListManager
     
     // MARK: - Outlets.
     
     @IBOutlet weak var todoList: UITableView!
-    
+
+    // MARK: - Init functions.
+
+    init(todoListManager: ToDoListManager) {
+        self.listManager = todoListManager
+
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented in ListViewController.")
+    }
+
     // MARK: - UIView lifecycle functions.
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
+        let nib = UINib.init(nibName: "ItemTableViewCell", bundle: nil)
+        todoList.register(nib, forCellReuseIdentifier: "ToDoCell")
+
         let addButton = UIBarButtonItem.init(title: "New Item", style: .plain, target: self, action: #selector(addToDoItem))
         navigationItem.rightBarButtonItem = addButton
         
@@ -46,7 +61,6 @@ extension ListViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("ABX")
         return listManager.itemCount
     }
     
@@ -76,7 +90,7 @@ extension ListViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = todoList.dequeueReusableCell(withIdentifier: "ToDoCell") as! ToDoTableViewCell
+        let cell = todoList.dequeueReusableCell(withIdentifier: "ToDoCell") as! ItemTableViewCell
         cell.title.text = listManager.item(indexPath.row)
         
         return cell

@@ -9,7 +9,7 @@
 import XCTest
 @testable import VOSToDo
 
-class ToDoTableViewTests: XCTestCase {
+class ItemTableViewCellTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
@@ -22,7 +22,7 @@ class ToDoTableViewTests: XCTestCase {
     }
     
     func testCreateable() {
-        let cell = ToDoTableViewCell()
+        let cell = ItemTableViewCell()
         XCTAssertNotNil(cell)
     }
 }
