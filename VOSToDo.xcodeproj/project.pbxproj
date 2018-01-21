@@ -18,6 +18,7 @@
 		F199DA3E2011DAAA00FB260C /* ToDoListManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F199DA3D2011DAAA00FB260C /* ToDoListManager.swift */; };
 		F199DA402011E08800FB260C /* ToDoListManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F199DA3F2011E08800FB260C /* ToDoListManagerTests.swift */; };
 		F199DA462011E42800FB260C /* ToDoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F199DA452011E42800FB260C /* ToDoTableViewCell.swift */; };
+		F1C35AEC201486A800433BD2 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F1C35AEB201486A800433BD2 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		F199DA3D2011DAAA00FB260C /* ToDoListManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListManager.swift; sourceTree = "<group>"; };
 		F199DA3F2011E08800FB260C /* ToDoListManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListManagerTests.swift; sourceTree = "<group>"; };
 		F199DA452011E42800FB260C /* ToDoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoTableViewCell.swift; sourceTree = "<group>"; };
+		F1C35AEB201486A800433BD2 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 		F199DA0B2011D0F500FB260C = {
 			isa = PBXGroup;
 			children = (
+				F1C35AEB201486A800433BD2 /* README.md */,
 				F199DA162011D0F500FB260C /* VOSToDo */,
 				F199DA2B2011D0F500FB260C /* VOSToDoTests */,
 				F199DA152011D0F500FB260C /* Products */,
@@ -212,6 +215,7 @@
 			files = (
 				F199DA222011D0F500FB260C /* LaunchScreen.storyboard in Resources */,
 				F199DA1F2011D0F500FB260C /* Assets.xcassets in Resources */,
+				F1C35AEC201486A800433BD2 /* README.md in Resources */,
 				F199DA1D2011D0F500FB260C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,6 +8,8 @@
 
 import Foundation
 
+typealias OptionalCompletion = (() -> Void)?
+
 class ToDoListManager {
 
     // MARK: - Local constants and variables.
@@ -37,13 +39,13 @@ class ToDoListManager {
         return items[index].title
     }
     
-    public func addItem(completion: () -> ()) {
+    public func addItem(completion: OptionalCompletion = nil) {
         items.append(ToDo("New item \(items.count + 1)."))
-        completion()
+        completion?()
     }
     
-    public func removeItem(_ index: Int, completion: () -> ()) {
+    public func removeItem(_ index: Int, completion: OptionalCompletion = nil) {
         items.remove(at: index)
-        completion()
+        completion?()
     }
 }

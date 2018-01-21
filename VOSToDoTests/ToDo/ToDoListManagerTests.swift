@@ -11,32 +11,63 @@ import XCTest
 
 class ToDoListManagerTests: XCTestCase {
     
+    var manager: ToDoListManager?
+
     override func setUp() {
         super.setUp()
-        // Put setup code here.
+
+        // Setup code.
+        manager = ToDoListManager()
+
     }
     
     override func tearDown() {
-        // Put teardown code here.
+        // Teardown code.
+        manager = nil
+
         super.tearDown()
     }
     
     func testCreatable() {
-        let manager = ToDoListManager()
         XCTAssertNotNil(manager)
     }
 
     func testInvalidIndex() {
-        let manager = ToDoListManager()
 
         // First, confirm that at least one item exists.
-        XCTAssertTrue(manager.itemCount >= 0)
+        XCTAssertTrue(manager!.itemCount >= 0)
 
         // Test.
-        XCTAssertNil(manager.item(-99))
+        XCTAssertNil(manager!.item(-99))
 
-        let highIndex = manager.itemCount + 1
-        XCTAssertNil(manager.item(highIndex))
+        let highIndex = manager!.itemCount + 1
+        XCTAssertNil(manager!.item(highIndex))
 
+    }
+
+    func testAddItemAddsItem() {
+        let initialCount = manager!.itemCount
+        manager!.addItem()
+        XCTAssertEqual(initialCount + 1, manager!.itemCount)
+    }
+
+    func testAddItemCallsCompletion() {
+        var completionCalled = false
+        manager!.addItem { completionCalled = true }
+        XCTAssertTrue(completionCalled)
+    }
+
+    func testRemoveItemRemovesItem() {
+        manager!.addItem()
+        let initialCount = manager!.itemCount
+        manager!.removeItem(0)
+        XCTAssertEqual(initialCount - 1, manager!.itemCount)
+    }
+
+    func testRemoveItemCallsCompletion() {
+        var completionCalled = false
+        manager!.addItem()
+        manager!.removeItem(0) { completionCalled = true }
+        XCTAssertTrue(completionCalled)
     }
 }

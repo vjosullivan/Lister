@@ -33,7 +33,7 @@ class ViewController: UIViewController {
     @objc
     func addToDoItem() {
         listManager.addItem() {
-            todoList.reloadData()
+            self.todoList.reloadData()
         }
     }
 }
