@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ListViewController.swift
 //  VOSToDo
 //
 //  Created by Vincent O'Sullivan on 19/01/2018.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ListViewController: UIViewController {
     
     // MARK: - Local constants and variables.
     
@@ -38,7 +38,7 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: UITableViewDataSource {
+extension ListViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         // TODO: Remove magic number.
@@ -61,7 +61,7 @@ extension ViewController: UITableViewDataSource {
         let deleteButton = UITableViewRowAction(style: .default, title: "Delete", handler: deleteHandler)
         deleteButton.backgroundColor = UIColor.red
         
-        return [editButton, deleteButton]
+        return [deleteButton, editButton]
     }
     
     private func deleteHandler(_ action: UITableViewRowAction, _ indexPath: IndexPath) {
@@ -83,6 +83,6 @@ extension ViewController: UITableViewDataSource {
     }
 }
 
-extension ViewController: UITableViewDelegate {
+extension ListViewController: UITableViewDelegate {
     
 }
