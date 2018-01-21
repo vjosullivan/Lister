@@ -1,5 +1,5 @@
 //
-//  ToDoListManager.swift
+//  ItemsManager.swift
 //  VOSToDo
 //
 //  Created by Vincent O'Sullivan on 19/01/2018.
@@ -10,11 +10,11 @@ import Foundation
 
 typealias OptionalCompletion = (() -> Void)?
 
-class ToDoListManager {
+class ItemsManager {
 
     // MARK: - Local constants and variables.
 
-    private var items = [ToDo]()
+    private var items = [Item]()
 
     // MARK: - Properties.
 
@@ -26,7 +26,7 @@ class ToDoListManager {
 
     init() {
         for i in 1...3 {
-            items.append(ToDo("Item \(i)."))
+            items.append(Item("Item \(i)."))
         }
     }
 
@@ -40,7 +40,7 @@ class ToDoListManager {
     }
     
     public func addItem(completion: OptionalCompletion = nil) {
-        items.append(ToDo("New item \(items.count + 1)."))
+        items.append(Item("New item \(items.count + 1)."))
         completion?()
     }
     

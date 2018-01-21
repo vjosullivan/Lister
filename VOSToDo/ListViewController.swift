@@ -12,16 +12,16 @@ class ListViewController: UIViewController {
     
     // MARK: - Local constants and variables.
     
-    private let listManager: ToDoListManager
+    private let itemsManager: ItemsManager
     
     // MARK: - Outlets.
     
-    @IBOutlet weak var todoList: UITableView!
+    @IBOutlet weak var itemsTable: UITableView!
 
     // MARK: - Init functions.
 
-    init(todoListManager: ToDoListManager) {
-        self.listManager = todoListManager
+    init(itemsManager: ItemsManager) {
+        self.itemsManager = itemsManager
 
         super.init(nibName: nil, bundle: nil)
     }
@@ -36,19 +36,19 @@ class ListViewController: UIViewController {
         super.viewDidLoad()
 
         let nib = UINib.init(nibName: "ItemTableViewCell", bundle: nil)
-        todoList.register(nib, forCellReuseIdentifier: "ToDoCell")
+        itemsTable.register(nib, forCellReuseIdentifier: "ItemCell")
 
-        let addButton = UIBarButtonItem.init(title: "New Item", style: .plain, target: self, action: #selector(addToDoItem))
+        let addButton = UIBarButtonItem.init(title: "New Item", style: .plain, target: self, action: #selector(addItem))
         navigationItem.rightBarButtonItem = addButton
         
-        todoList.dataSource = self
-        todoList.delegate   = self
+        itemsTable.dataSource = self
+        itemsTable.delegate   = self
     }
     
     @objc
-    func addToDoItem() {
-        listManager.addItem() {
-            self.todoList.reloadData()
+    func addItem() {
+        itemsManager.addItem() {
+            self.itemsTable.reloadData()
         }
     }
 }
@@ -61,7 +61,7 @@ extension ListViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return listManager.itemCount
+        return itemsManager.itemCount
     }
     
     @available(iOS 8.0, *)
@@ -80,8 +80,8 @@ extension ListViewController: UITableViewDataSource {
     
     private func deleteHandler(_ action: UITableViewRowAction, _ indexPath: IndexPath) {
         print("Delete button tapped")
-        self.listManager.removeItem(indexPath.row) {
-            self.todoList.deleteRows(at: [indexPath], with: .fade)
+        self.itemsManager.removeItem(indexPath.row) {
+            self.itemsTable.deleteRows(at: [indexPath], with: .fade)
         }
     }
     
@@ -90,8 +90,8 @@ extension ListViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = todoList.dequeueReusableCell(withIdentifier: "ToDoCell") as! ItemTableViewCell
-        cell.title.text = listManager.item(indexPath.row)
+        let cell = itemsTable.dequeueReusableCell(withIdentifier: "ItemCell") as! ItemTableViewCell
+        cell.title.text = itemsManager.item(indexPath.row)
         
         return cell
     }

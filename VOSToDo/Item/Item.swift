@@ -1,5 +1,5 @@
 //
-//  ToDo.swift
+//  Item.swift
 //  VOSToDo
 //
 //  Created by Vincent O'Sullivan on 19/01/2018.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct ToDo {
+struct Item {
     let title: String
     let completed = false
 

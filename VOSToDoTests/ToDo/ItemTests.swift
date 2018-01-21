@@ -1,5 +1,5 @@
 //
-//  ToDoTests.swift
+//  ItemTests.swift
 //  VOSToDoTests
 //
 //  Created by Vincent O'Sullivan on 19/01/2018.
@@ -9,7 +9,7 @@
 import XCTest
 @testable import VOSToDo
 
-class ToDoTests: XCTestCase {
+class ItemTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
@@ -21,10 +21,10 @@ class ToDoTests: XCTestCase {
         super.tearDown()
     }
     
-    func testToDoCreatable() {
+    func testItemCreatable() {
         let text = "Perform unit tests."
-        let todo = ToDo(text)
-        XCTAssertNotNil(todo)
-        XCTAssertEqual(text, todo.title)
+        let item = Item(text)
+        XCTAssertNotNil(item)
+        XCTAssertEqual(text, item.title)
     }
 }

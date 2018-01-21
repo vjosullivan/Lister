@@ -17,8 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         self.window = UIWindow(frame: UIScreen.main.bounds)
         let nav1 = UINavigationController()
-        let listManager = ToDoListManager()
-        nav1.pushViewController(ListViewController(todoListManager: listManager), animated: true)
+        let itemsManager = ItemsManager()
+        nav1.pushViewController(ListViewController(itemsManager: itemsManager), animated: true)
         self.window!.rootViewController = nav1
         self.window?.makeKeyAndVisible()
 

@@ -12,7 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ListViewController" customModule="VOSToDo" customModuleProvider="target">
             <connections>
-                <outlet property="todoList" destination="PGL-Yb-FBI" id="4tE-re-o1W"/>
+                <outlet property="itemsTable" destination="PGL-Yb-FBI" id="4tE-re-o1W"/>
                 <outlet property="view" destination="iN0-l3-epB" id="1xz-jC-kSO"/>
             </connections>
         </placeholder>

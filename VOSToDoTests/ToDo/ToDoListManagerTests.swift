@@ -1,5 +1,5 @@
 //
-//  ToDoListManagerTests.swift
+//  ItemListManagerTests.swift
 //  VOSToDoTests
 //
 //  Created by Vincent O'Sullivan on 19/01/2018.
@@ -9,15 +9,15 @@
 import XCTest
 @testable import VOSToDo
 
-class ToDoListManagerTests: XCTestCase {
+class ItemListManagerTests: XCTestCase {
     
-    var manager: ToDoListManager?
+    var manager: ItemsManager?
 
     override func setUp() {
         super.setUp()
 
         // Setup code.
-        manager = ToDoListManager()
+        manager = ItemsManager()
 
     }
     
