@@ -1,5 +1,5 @@
-## VOSToDo
-VOSToDoYet another ToDo list.  A simple programming exercise for to try out a few ideas.
+## Lister
+A list management app.  It can be a "To Do" list, a shopping list, task list or anything.  I am developing this primarily as a programming exercise to try out a few ideas.
 ### Current features
 + Add an item
 + Delete an item

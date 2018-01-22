@@ -1,13 +1,13 @@
 //
 //  ItemTableViewTests.swift
-//  VOSToDoTests
+//  ListerTests
 //
 //  Created by Vincent O'Sullivan on 19/01/2018.
 //  Copyright © 2018 Vincent O'Sullivan. All rights reserved.
 //
 
 import XCTest
-@testable import VOSToDo
+@testable import Lister
 
 class ItemTableViewCellTests: XCTestCase {
     

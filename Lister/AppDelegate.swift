@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  VOSToDo
+//  Lister
 //
 //  Created by Vincent O'Sullivan on 19/01/2018.
 //  Copyright © 2018 Vincent O'Sullivan. All rights reserved.
@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = UIWindow(frame: UIScreen.main.bounds)
         let nav1 = UINavigationController()
         let itemsManager = ItemsManager()
-        nav1.pushViewController(ListViewController(itemsManager: itemsManager), animated: true)
+        nav1.pushViewController(ItemsViewController(itemsManager: itemsManager), animated: true)
         self.window!.rootViewController = nav1
         self.window?.makeKeyAndVisible()
 

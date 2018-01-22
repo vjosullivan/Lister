@@ -1,6 +1,6 @@
 //
-//  ListViewController.swift
-//  VOSToDo
+//  ItemsViewController.swift
+//  Lister
 //
 //  Created by Vincent O'Sullivan on 19/01/2018.
 //  Copyright © 2018 Vincent O'Sullivan. All rights reserved.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ListViewController: UIViewController {
+class ItemsViewController: UIViewController {
     
     // MARK: - Local constants and variables.
     
@@ -27,7 +27,7 @@ class ListViewController: UIViewController {
     }
 
     required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented in ListViewController.")
+        fatalError("init(coder:) has not been implemented in ItemsViewController.")
     }
 
     // MARK: - UIView lifecycle functions.
@@ -53,7 +53,7 @@ class ListViewController: UIViewController {
     }
 }
 
-extension ListViewController: UITableViewDataSource {
+extension ItemsViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         // TODO: Remove magic number.
@@ -97,6 +97,6 @@ extension ListViewController: UITableViewDataSource {
     }
 }
 
-extension ListViewController: UITableViewDelegate {
+extension ItemsViewController: UITableViewDelegate {
     
 }

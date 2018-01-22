@@ -1,15 +1,15 @@
 //
-//  ItemListManagerTests.swift
-//  VOSToDoTests
+//  ItemsManagerTests.swift
+//  ListerTests
 //
 //  Created by Vincent O'Sullivan on 19/01/2018.
 //  Copyright © 2018 Vincent O'Sullivan. All rights reserved.
 //
 
 import XCTest
-@testable import VOSToDo
+@testable import Lister
 
-class ItemListManagerTests: XCTestCase {
+class ItemsManagerTests: XCTestCase {
     
     var manager: ItemsManager?
 

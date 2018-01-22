@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F199DA132011D0F500FB260C"
-               BuildableName = "VOSToDo.app"
-               BlueprintName = "VOSToDo"
-               ReferencedContainer = "container:VOSToDo.xcodeproj">
+               BuildableName = "Lister.app"
+               BlueprintName = "Lister"
+               ReferencedContainer = "container:Lister.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,9 +35,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F199DA272011D0F500FB260C"
-               BuildableName = "VOSToDoTests.xctest"
-               BlueprintName = "VOSToDoTests"
-               ReferencedContainer = "container:VOSToDo.xcodeproj">
+               BuildableName = "ListerTests.xctest"
+               BlueprintName = "ListerTests"
+               ReferencedContainer = "container:Lister.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -45,9 +45,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F199DA132011D0F500FB260C"
-            BuildableName = "VOSToDo.app"
-            BlueprintName = "VOSToDo"
-            ReferencedContainer = "container:VOSToDo.xcodeproj">
+            BuildableName = "Lister.app"
+            BlueprintName = "Lister"
+            ReferencedContainer = "container:Lister.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -69,9 +69,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F199DA132011D0F500FB260C"
-            BuildableName = "VOSToDo.app"
-            BlueprintName = "VOSToDo"
-            ReferencedContainer = "container:VOSToDo.xcodeproj">
+            BuildableName = "Lister.app"
+            BlueprintName = "Lister"
+            ReferencedContainer = "container:Lister.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -88,9 +88,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F199DA132011D0F500FB260C"
-            BuildableName = "VOSToDo.app"
-            BlueprintName = "VOSToDo"
-            ReferencedContainer = "container:VOSToDo.xcodeproj">
+            BuildableName = "Lister.app"
+            BlueprintName = "Lister"
+            ReferencedContainer = "container:Lister.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

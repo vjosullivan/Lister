@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:VOSToDo.xcodeproj">
+      location = "self:Lister">
    </FileRef>
 </Workspace>
