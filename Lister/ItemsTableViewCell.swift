@@ -1,5 +1,5 @@
 //
-//  ItemTableViewCell.swift
+//  ItemsTableViewCell.swift
 //  Lister
 //
 //  Created by Vincent O'Sullivan on 21/01/2018.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ItemTableViewCell: UITableViewCell {
+class ItemsTableViewCell: UITableViewCell {
 
     @IBOutlet weak var title: UILabel!
     

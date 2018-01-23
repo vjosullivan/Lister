@@ -1,5 +1,5 @@
 //
-//  ItemTableViewTests.swift
+//  ItemsTableViewTests.swift
 //  ListerTests
 //
 //  Created by Vincent O'Sullivan on 19/01/2018.
@@ -9,7 +9,7 @@
 import XCTest
 @testable import Lister
 
-class ItemTableViewCellTests: XCTestCase {
+class ItemsTableViewCellTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
@@ -22,7 +22,7 @@ class ItemTableViewCellTests: XCTestCase {
     }
     
     func testCreateable() {
-        let cell = ItemTableViewCell()
+        let cell = ItemsTableViewCell()
         XCTAssertNotNil(cell)
     }
 }

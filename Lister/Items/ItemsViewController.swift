@@ -35,7 +35,7 @@ class ItemsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let nib = UINib.init(nibName: "ItemTableViewCell", bundle: nil)
+        let nib = UINib.init(nibName: "ItemsTableViewCell", bundle: nil)
         itemsTable.register(nib, forCellReuseIdentifier: "ItemCell")
 
         let addButton = UIBarButtonItem.init(title: "New Item", style: .plain, target: self, action: #selector(addItem))
@@ -90,7 +90,7 @@ extension ItemsViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = itemsTable.dequeueReusableCell(withIdentifier: "ItemCell") as! ItemTableViewCell
+        let cell = itemsTable.dequeueReusableCell(withIdentifier: "ItemCell") as! ItemsTableViewCell
         cell.title.text = itemsManager.item(indexPath.row)
         
         return cell
