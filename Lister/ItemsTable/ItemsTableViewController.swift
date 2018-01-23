@@ -1,5 +1,5 @@
 //
-//  ItemsViewController.swift
+//  ItemsTableViewController.swift
 //  Lister
 //
 //  Created by Vincent O'Sullivan on 19/01/2018.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ItemsViewController: UIViewController {
+class ItemsTableViewController: UIViewController {
     
     // MARK: - Local constants and variables.
     
@@ -27,7 +27,7 @@ class ItemsViewController: UIViewController {
     }
 
     required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented in ItemsViewController.")
+        fatalError("init(coder:) has not been implemented in ItemsTableViewController.")
     }
 
     // MARK: - UIView lifecycle functions.
@@ -53,7 +53,7 @@ class ItemsViewController: UIViewController {
     }
 }
 
-extension ItemsViewController: UITableViewDataSource {
+extension ItemsTableViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         // TODO: Remove magic number.
@@ -97,6 +97,6 @@ extension ItemsViewController: UITableViewDataSource {
     }
 }
 
-extension ItemsViewController: UITableViewDelegate {
+extension ItemsTableViewController: UITableViewDelegate {
     
 }
