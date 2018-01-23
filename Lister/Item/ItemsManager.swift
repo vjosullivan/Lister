@@ -32,11 +32,11 @@ class ItemsManager {
 
     // MARK: - Public functions
 
-    public func item(_ index: Int) -> String? {
+    public func item(_ index: Int) -> Item? {
         guard index >= 0 && index < items.count else {
             return nil
         }
-        return items[index].title
+        return items[index]
     }
     
     public func addItem(completion: OptionalCompletion = nil) {

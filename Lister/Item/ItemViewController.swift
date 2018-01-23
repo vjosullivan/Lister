@@ -20,12 +20,8 @@ class ItemViewController: UIViewController {
 
     // MARK: - Init functions.
 
-    convenience init() {
-        self.init(item: Item("A New Item"))
-    }
-
-    init(item: Item) {
-        self.item = item
+    init(item: Item? = nil) {
+        self.item = item ?? Item("A New Item")
 
         super.init(nibName: nil, bundle: nil)
     }

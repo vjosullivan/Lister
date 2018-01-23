@@ -17,27 +17,27 @@ class ItemsTableViewController: UIViewController {
     // MARK: - Outlets.
     
     @IBOutlet weak var itemsTable: UITableView!
-
+    
     // MARK: - Init functions.
-
+    
     init(itemsManager: ItemsManager) {
         self.itemsManager = itemsManager
-
+        
         super.init(nibName: nil, bundle: nil)
     }
-
+    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented in ItemsTableViewController.")
     }
-
+    
     // MARK: - UIView lifecycle functions.
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         let nib = UINib.init(nibName: "ItemsTableViewCell", bundle: nil)
         itemsTable.register(nib, forCellReuseIdentifier: "ItemCell")
-
+        
         let addButton = UIBarButtonItem.init(title: "New Item", style: .plain, target: self, action: #selector(addItem))
         navigationItem.rightBarButtonItem = addButton
         
@@ -47,11 +47,15 @@ class ItemsTableViewController: UIViewController {
     
     @objc
     func addItem() {
+        itemsManager.addItem() {
+            self.itemsTable.reloadData()
+        }
+    }
+
+    private func edit(_ item: Item? = nil) {
+        print("Editing \(item?.title ?? "nowt").")
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "Cancel", style: .plain, target: nil, action: nil)
-        navigationController!.pushViewController(ItemViewController(), animated: true)
-//        itemsManager.addItem() {
-//            self.itemsTable.reloadData()
-//        }
+        navigationController!.pushViewController(ItemViewController.init(item: item), animated: true)
     }
 }
 
@@ -72,7 +76,7 @@ extension ItemsTableViewController: UITableViewDataSource {
         // action one
         let editButton = UITableViewRowAction(style: .default, title: "Edit", handler: editHandler)
         editButton.backgroundColor = UIColor.blue
-
+        
         // action two
         let deleteButton = UITableViewRowAction(style: .default, title: "Delete", handler: deleteHandler)
         deleteButton.backgroundColor = UIColor.red
@@ -83,17 +87,18 @@ extension ItemsTableViewController: UITableViewDataSource {
     private func deleteHandler(_ action: UITableViewRowAction, _ indexPath: IndexPath) {
         print("Delete button tapped")
         self.itemsManager.removeItem(indexPath.row) {
-            self.itemsTable.deleteRows(at: [indexPath], with: .fade)
+            self.itemsTable.reloadData()
         }
     }
     
     private func editHandler(_ action: UITableViewRowAction, _ indexPath: IndexPath) {
         print("Edit button tapped")
+        edit(itemsManager.item(indexPath.row))
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = itemsTable.dequeueReusableCell(withIdentifier: "ItemCell") as! ItemsTableViewCell
-        cell.title.text = itemsManager.item(indexPath.row)
+        cell.title.text = itemsManager.item(indexPath.row)?.title ?? ""
         
         return cell
     }
