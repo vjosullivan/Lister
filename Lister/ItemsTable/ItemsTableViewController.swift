@@ -47,9 +47,11 @@ class ItemsTableViewController: UIViewController {
     
     @objc
     func addItem() {
-        itemsManager.addItem() {
-            self.itemsTable.reloadData()
-        }
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "Cancel", style: .plain, target: nil, action: nil)
+        navigationController!.pushViewController(ItemViewController(), animated: true)
+//        itemsManager.addItem() {
+//            self.itemsTable.reloadData()
+//        }
     }
 }
 

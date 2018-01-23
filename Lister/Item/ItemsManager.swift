@@ -40,7 +40,7 @@ class ItemsManager {
     }
     
     public func addItem(completion: OptionalCompletion = nil) {
-        items.append(Item("New item \(items.count + 1)."))
+        items.append(Item("Sample item \(items.count + 1)."))
         completion?()
     }
     

@@ -21,6 +21,7 @@
 		F1C35AEE20149F6400433BD2 /* ItemsTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1C35AED20149F6400433BD2 /* ItemsTableViewController.xib */; };
 		F1C35AF02014AB3500433BD2 /* ItemsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C35AEF2014AB3500433BD2 /* ItemsTableViewCell.swift */; };
 		F1C35AF62015555900433BD2 /* ItemsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1C35AF52015555900433BD2 /* ItemsTableViewCell.xib */; };
+		F1EDC69C20171AE20052B4D0 /* ItemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1EDC69B20171AE20052B4D0 /* ItemViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		F1C35AED20149F6400433BD2 /* ItemsTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemsTableViewController.xib; sourceTree = "<group>"; };
 		F1C35AEF2014AB3500433BD2 /* ItemsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsTableViewCell.swift; sourceTree = "<group>"; };
 		F1C35AF52015555900433BD2 /* ItemsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemsTableViewCell.xib; sourceTree = "<group>"; };
+		F1EDC69B20171AE20052B4D0 /* ItemViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 				F199DA382011D2C500FB260C /* Item.swift */,
 				F199DA3D2011DAAA00FB260C /* ItemsManager.swift */,
 				F1ACB72D201710EB00DE6DF0 /* ItemViewController.swift */,
+				F1EDC69B20171AE20052B4D0 /* ItemViewController.xib */,
 			);
 			path = Item;
 			sourceTree = "<group>";
@@ -229,6 +232,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F199DA222011D0F500FB260C /* LaunchScreen.storyboard in Resources */,
+				F1EDC69C20171AE20052B4D0 /* ItemViewController.xib in Resources */,
 				F199DA1F2011D0F500FB260C /* Assets.xcassets in Resources */,
 				F1C35AEE20149F6400433BD2 /* ItemsTableViewController.xib in Resources */,
 				F1C35AF62015555900433BD2 /* ItemsTableViewCell.xib in Resources */,
