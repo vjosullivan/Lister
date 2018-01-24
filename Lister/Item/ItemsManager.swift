@@ -65,9 +65,11 @@ class ItemsManager {
     public func update(_ item: Item) {
         print("Manager: updating database with item \(item.ID).")
         if itemExists(withID: item.ID) {
-            print("Updating existing item.")
+            print("Item already exists.")
+            updateExisting(item)
         } else {
-            print("Adding new item")
+            print("Item is new.")
+            addNew(item)
         }
     }
 
@@ -78,5 +80,13 @@ class ItemsManager {
             if item.ID == soughtID { return true }
         }
         return false
+    }
+
+    private func updateExisting(_ item: Item) {
+        print("Updating existing item.")
+    }
+
+    private func addNew(_ item: Item) {
+        print("Adding new item.")
     }
 }
