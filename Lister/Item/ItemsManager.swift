@@ -61,4 +61,22 @@ class ItemsManager {
         items.remove(at: index)
         completion?()
     }
+
+    public func update(_ item: Item) {
+        print("Manager: updating database with item \(item.ID).")
+        if itemExists(withID: item.ID) {
+            print("Updating existing item.")
+        } else {
+            print("Adding new item")
+        }
+    }
+
+    // MARK: - Private functions.
+
+    private func itemExists(withID soughtID: UUID) -> Bool {
+        for item in items {
+            if item.ID == soughtID { return true }
+        }
+        return false
+    }
 }

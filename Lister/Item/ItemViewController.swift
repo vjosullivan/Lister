@@ -40,9 +40,15 @@ class ItemViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let saveButton = UIBarButtonItem(title: "Save",   style: .plain, target: nil, action: nil)
+        let saveButton = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(save))
         navigationItem.rightBarButtonItem = saveButton
         navigationItem.title = "New Item"
         itemTitle.text = item.title
+    }
+
+    @objc
+    func save() {
+        print("I'm saved!")
+        itemsManager.update(item)
     }
 }
