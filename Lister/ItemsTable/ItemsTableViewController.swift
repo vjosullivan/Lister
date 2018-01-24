@@ -38,7 +38,7 @@ class ItemsTableViewController: UIViewController {
         let nib = UINib.init(nibName: "ItemsTableViewCell", bundle: nil)
         itemsTable.register(nib, forCellReuseIdentifier: "ItemCell")
         
-        let addButton = UIBarButtonItem.init(title: "New Item", style: .plain, target: self, action: #selector(addItem))
+        let addButton = UIBarButtonItem.init(title: "New Item", style: .plain, target: self, action: #selector(addNewItem))
         navigationItem.rightBarButtonItem = addButton
         
         itemsTable.dataSource = self
@@ -46,16 +46,19 @@ class ItemsTableViewController: UIViewController {
     }
     
     @objc
-    func addItem() {
-        itemsManager.addItem() {
-            self.itemsTable.reloadData()
-        }
+    func addNewItem() {
+        print("Adding new item.")
+        edit()
     }
 
+    /// Presents an editing screen for a new or existing item.
+    ///
+    /// - Parameter item: (Optional) The `Item` to be edited.  If no item is given then a new item will be created.
+    ///
     private func edit(_ item: Item? = nil) {
-        print("Editing \(item?.title ?? "nowt").")
+        print("Editing \(item?.title ?? "Untitled Task").")
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "Cancel", style: .plain, target: nil, action: nil)
-        navigationController!.pushViewController(ItemViewController.init(item: item), animated: true)
+        navigationController!.pushViewController(ItemViewController(itemsManager: itemsManager, itemID: item?.ID), animated: true)
     }
 }
 

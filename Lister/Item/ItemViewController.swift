@@ -12,6 +12,7 @@ class ItemViewController: UIViewController {
 
     // MARK: - Local constants and variables.
 
+    private let itemsManager: ItemsManager
     private let item: Item
 
     // MARK: - Outlets.
@@ -20,9 +21,13 @@ class ItemViewController: UIViewController {
 
     // MARK: - Init functions.
 
-    init(item: Item? = nil) {
-        self.item = item ?? Item("A New Item")
-
+    init(itemsManager: ItemsManager, itemID: UUID? = nil) {
+        self.itemsManager = itemsManager
+        if let itemID = itemID, let existingItem = itemsManager.item(withID: itemID) {
+            self.item = existingItem
+        } else {
+            self.item = Item("A New Item")
+        }
         super.init(nibName: nil, bundle: nil)
     }
 

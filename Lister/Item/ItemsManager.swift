@@ -32,6 +32,19 @@ class ItemsManager {
 
     // MARK: - Public functions
 
+
+    /// If found, returns an existing item with the given ID otherwise `nil`.
+    ///
+    /// - Parameter id: The ID of the item to be returned.
+    /// - Returns: The specified item.
+    ///
+    public func item(withID soughtID: UUID) -> Item? {
+        for item in items {
+            if item.ID == soughtID { return item }
+        }
+        return nil
+    }
+
     public func item(_ index: Int) -> Item? {
         guard index >= 0 && index < items.count else {
             return nil

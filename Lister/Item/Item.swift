@@ -8,11 +8,16 @@
 
 import Foundation
 
+/// Represents anything that can appear in a list such as a "To Do" list, shopping list, task list, etc.
 struct Item {
+
+    /// Unique item identifier.
+    let ID: UUID
+    /// The main descriptive title or header for this item.
     let title: String
-    let completed = false
 
     init(_ title: String) {
+        self.ID    = UUID()
         self.title = title
     }
 }
