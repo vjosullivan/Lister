@@ -57,6 +57,7 @@ class ItemsTableViewController: UIViewController {
     ///
     private func edit(_ item: Item? = nil) {
         print("Editing \(item?.title ?? "Untitled Task").")
+        // TODO: Important - Refactor this code to use view-state drven architecture.
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "Cancel", style: .plain, target: nil, action: nil)
         navigationController!.pushViewController(ItemViewController(itemsManager: itemsManager, itemID: item?.ID), animated: true)
     }
